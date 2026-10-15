@@ -67,6 +67,16 @@ message.
 sh tests/hook.test.sh
 ```
 
+## References
+
+- **Original essay**: Eric S. Raymond, Rick Moen,
+  *How To Ask Questions The Smart Way* —
+  <http://www.catb.org/~esr/faqs/smart-questions.html>
+  (use `http://`; the site's HTTPS certificate does not match its domain)
+- **Chinese translation**:
+  [ryanhanwu/How-To-Ask-Questions-The-Smart-Way](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)
+  — Traditional Chinese in `README.md`, Simplified Chinese in `README-zh_CN.md`
+
 ## License
 
 ask-better is released under the [MIT License](LICENSE).

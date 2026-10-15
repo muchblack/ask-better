@@ -58,6 +58,15 @@ AI 會照常完成你交代的事。如果你的問題有缺口，讓它只能�
 sh tests/hook.test.sh
 ```
 
+## 參考資料
+
+- **英文原文**：Eric S. Raymond、Rick Moen，《How To Ask Questions The Smart Way》——
+  <http://www.catb.org/~esr/faqs/smart-questions.html>
+  （請用 `http://` 開啟，該網站的 HTTPS 憑證與網域不符）
+- **中文翻譯**：
+  [ryanhanwu/How-To-Ask-Questions-The-Smart-Way](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)
+  ——正體中文版在 `README.md`，簡體中文版在 `README-zh_CN.md`
+
 ## 授權
 
 ask-better 以 [MIT 授權](LICENSE)釋出。
