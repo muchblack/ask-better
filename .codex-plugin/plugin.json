@@ -1,6 +1,6 @@
 {
   "name": "ask-better",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Prompt coach based on ESR's \"How To Ask Questions The Smart Way\": after each reply, one line on how your request could be clearer, or nothing if it already is.",
   "author": {
     "name": "muchblack",
