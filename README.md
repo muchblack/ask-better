@@ -2,6 +2,8 @@
 
 **English** | [正體中文](README.zh-TW.md)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A prompt coach for AI coding agents, based on Eric S. Raymond's
 [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html).
 
@@ -67,5 +69,19 @@ sh tests/hook.test.sh
 
 ## License
 
-MIT. The checklist summarizes ESR and Rick Moen's essay; read the original
-via the link above.
+ask-better is released under the [MIT License](LICENSE).
+
+- **You may** use, copy, modify, merge, publish, distribute, sublicense and
+  sell it, in personal and commercial projects alike.
+- **You must** keep the copyright notice and the license text in all copies
+  or substantial portions of the software.
+- **No warranty**: it is provided "as is", and the authors are not liable for
+  any damages arising from its use.
+
+### Third-party content
+
+*How To Ask Questions The Smart Way* is copyright © Eric S. Raymond and Rick
+Moen, and is **not** covered by this project's MIT License. ask-better
+contains no text from the essay; the checklist is an original summary of its
+ideas, and the essay is linked rather than copied. Read the original at
+<http://www.catb.org/~esr/faqs/smart-questions.html>.

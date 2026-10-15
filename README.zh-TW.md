@@ -2,6 +2,8 @@
 
 [English](README.md) | **正體中文**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 給 AI coding agent 用的提問教練，依據 Eric S. Raymond 的
 [《提問的智慧》（How To Ask Questions The Smart Way）](http://www.catb.org/~esr/faqs/smart-questions.html)。
 
@@ -58,4 +60,14 @@ sh tests/hook.test.sh
 
 ## 授權
 
-MIT。檢查清單整理自 ESR 與 Rick Moen 的文章，原文請見上方連結。
+ask-better 以 [MIT 授權](LICENSE)釋出。
+
+- **可以**：使用、複製、修改、合併、發布、散布、再授權及販售，個人與商業專案都可以。
+- **必須**：在所有副本或主要部分中保留著作權聲明與授權條款全文。
+- **不提供擔保**：本軟體依「現狀」提供，作者不對使用它造成的任何損害負責。
+
+授權的法律效力以 [LICENSE](LICENSE) 的英文原文為準，這裡的中文說明僅供參考。
+
+### 第三方內容
+
+《提問的智慧》（*How To Ask Questions The Smart Way*）的著作權屬於 Eric S. Raymond 與 Rick Moen，**不在**本專案的 MIT 授權範圍內。ask-better 沒有收錄原文內容：檢查清單是依照文章觀念自行整理的摘要，原文只以連結方式引用。原文請見 <http://www.catb.org/~esr/faqs/smart-questions.html>。
