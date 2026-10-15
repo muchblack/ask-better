@@ -1,0 +1,11 @@
+{
+  "ask-better": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "sh hooks/ask-better.sh agy",
+        "timeout": 5
+      }
+    ]
+  }
+}

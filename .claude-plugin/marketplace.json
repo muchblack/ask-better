@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ask-better",
+  "description": "Prompt coach based on ESR's \"How To Ask Questions The Smart Way\".",
+  "owner": {
+    "name": "muchblack",
+    "url": "https://github.com/muchblack"
+  },
+  "plugins": [
+    {
+      "name": "ask-better",
+      "description": "One line after each reply on how your request could be clearer to another person or AI. Silent when it's already clear.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

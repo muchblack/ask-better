@@ -1,0 +1,28 @@
+{
+  "name": "ask-better",
+  "version": "0.1.0",
+  "description": "Prompt coach based on ESR's \"How To Ask Questions The Smart Way\": after each reply, one line on how your request could be clearer, or nothing if it already is.",
+  "author": {
+    "name": "muchblack",
+    "url": "https://github.com/muchblack"
+  },
+  "homepage": "https://github.com/muchblack/ask-better",
+  "repository": "https://github.com/muchblack/ask-better",
+  "license": "MIT",
+  "keywords": ["prompting", "communication", "smart-questions", "coaching"],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "Ask Better",
+    "shortDescription": "Coaches you to ask clearer questions",
+    "longDescription": "After each reply, adds at most one line on what your request was missing (goal, raw error, expected vs actual, scope) with a better phrasing. Silent when the request is already clear.",
+    "developerName": "muchblack",
+    "category": "Productivity",
+    "capabilities": ["Instructions", "Lifecycle hooks"],
+    "websiteURL": "https://github.com/muchblack/ask-better",
+    "defaultPrompt": [
+      "Review my last request with ask-better.",
+      "How could I ask this more clearly?"
+    ]
+  }
+}
