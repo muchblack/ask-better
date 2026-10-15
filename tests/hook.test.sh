@@ -57,4 +57,14 @@ assert len({m["version"] for m in ms}) == 1
 PY
 check "manifests consistent" $?
 
+# 6. The copy-paste text in both READMEs matches what the hook emits.
+echo '{}' | XDG_CONFIG_HOME="$TMP" sh "$HOOK" | python3 -c '
+import json, os, sys
+text = json.load(sys.stdin)["hookSpecificOutput"]["additionalContext"]
+for f in ["README.md", "README.zh-TW.md"]:
+    lines = open(os.path.join(sys.argv[1], f), encoding="utf-8").read().splitlines()
+    assert text in lines, f
+' "$ROOT"
+check "README text matches hook" $?
+
 exit $fail
