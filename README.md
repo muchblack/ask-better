@@ -1,5 +1,7 @@
 # ask-better
 
+**English** | [正體中文](README.zh-TW.md)
+
 A prompt coach for AI coding agents, based on Eric S. Raymond's
 [How To Ask Questions The Smart Way](http://www.catb.org/~esr/faqs/smart-questions.html).
 
@@ -12,8 +14,6 @@ of its reply:
 ```
 
 If the request was clear, it says nothing. It never blocks or delays the task.
-
-[繁體中文說明](#繁體中文)
 
 ## What it checks
 
@@ -69,17 +69,3 @@ sh tests/hook.test.sh
 
 MIT. The checklist summarizes ESR and Rick Moen's essay; read the original
 via the link above.
-
----
-
-## 繁體中文
-
-依據 ESR《提問的智慧》做的 AI 提問教練。
-
-AI 照常完成你交代的事；如果你的問題有缺口，讓它得用猜的，或換成別人會回頭追問，它會在回覆最後加**一行**提醒，告訴你缺了什麼，並附上更好的問法。問題已經清楚就不出聲，也不會擋住或拖慢工作。
-
-**檢查項目**：目標與步驟（XY 問題）、錯誤原文、預期與實際、範圍與完成條件、猜測當事實、已試過什麼、一次塞多個決策。
-
-**安裝**：見上方 Install 表格。Claude Code 和 Codex 每則訊息都會注入檢查提示；Antigravity CLI 沒有「送出訊息時」的 hook，改在 session 開始時注入一次，整段對話都有效，開關要到下一個 session 才生效。
-
-**指令**：`/ask-better <文字>` 完整審查並給改寫範例；`/ask-better off`／`on` 關閉或開啟自動提醒。
