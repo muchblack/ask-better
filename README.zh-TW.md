@@ -37,6 +37,21 @@ AI 會照常完成你交代的事。如果你的問題有缺口，讓它只能�
 - ¹ **Antigravity CLI** 沒有「每送出一則訊息」的 hook，所以改在 session 開始時（`SessionStart`）注入一次，之後整段對話都有效。開關要到下一個 session 才會生效。
 - hook 是 POSIX `sh` 腳本，沒有其他依賴。在 Windows 上，Claude Code 會透過 Git Bash 執行 hook。
 
+### Claude Desktop
+
+| 模式 | 每則訊息自動提醒 | `/ask-better` 審查 |
+|------|:---:|:---:|
+| **Code** 分頁 | ✅ | ✅ |
+| 一般 Chat | ❌ | ✅ ² |
+
+- **Code** 分頁跑的就是 Claude Code，用上面 Claude Code 的指令安裝即可。在 Windows 上，Desktop 讀的是 `%USERPROFILE%\.claude`，不是 WSL 裡那份，所以在 WSL 裝過的 plugin 要在 Desktop 再裝一次。hook 需要 Git for Windows（Git Bash）。
+- ² 一般 Chat 沒有 hook。把 `skills/ask-better` 資料夾壓成 zip，到 Settings → Capabilities → Skills 上傳，就能用完整審查。`/ask-better off`／`on` 在 Chat 裡沒有作用。
+- 如果還是想在 Chat 的每則回覆後看到提醒，可以把下面這段貼進專案指示（Project instructions）或個人偏好設定，刪掉就等於關閉。（內容就是 `hooks/ask-better.sh` 裡的 `TEXT` 字串，已拿掉 JSON 跳脫字元。）
+
+```text
+[ask-better] For each user message: do the task normally first. Then, ONLY if the message has a gap that would make another person or AI misread it or need a follow-up question, and earlier context does not already fill it, append ONE final line in the user's language: `💡 <what is missing>. e.g. "<better phrasing>"` (translate the label naturally). Gaps: goal vs step (XY problem); missing raw error, output or repro; expected vs actual; unclear scope or done-condition (analyze only / edit / commit); guesses stated as facts; what was already tried; several unrelated decisions in one message. Stay silent if the message is clear, a short reply, an option pick, a slash command, chit-chat, or the same gap was already pointed out this session. Never refuse or delay the task because of this.
+```
+
 ## 使用方式
 
 | 指令 | 作用 |

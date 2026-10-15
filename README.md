@@ -42,6 +42,30 @@ If the request was clear, it says nothing. It never blocks or delays the task.
 - The hook is a POSIX `sh` script with no other dependencies. On Windows,
   Claude Code runs hooks through Git Bash.
 
+### Claude Desktop
+
+| Mode | Per-message hint | `/ask-better` review |
+|------|:---:|:---:|
+| **Code** tab | ✅ | ✅ |
+| Regular chat | ❌ | ✅ ² |
+
+- The **Code** tab runs Claude Code, so install the plugin there with the
+  Claude Code commands above. On Windows, Desktop reads
+  `%USERPROFILE%\.claude`, not the one inside WSL, so a plugin installed in
+  WSL has to be installed again in Desktop. The hook needs Git for Windows
+  (Git Bash).
+- ² Regular chat has no hooks. Zip the `skills/ask-better` folder and upload
+  it under Settings → Capabilities → Skills to get the full review.
+  `/ask-better off` and `on` have no effect there.
+- To get a hint after each chat reply anyway, paste the text below into your
+  project instructions or personal preferences. Remove it to turn the hint
+  off. (It is the `TEXT` string from `hooks/ask-better.sh` with the JSON
+  escaping removed.)
+
+```text
+[ask-better] For each user message: do the task normally first. Then, ONLY if the message has a gap that would make another person or AI misread it or need a follow-up question, and earlier context does not already fill it, append ONE final line in the user's language: `💡 <what is missing>. e.g. "<better phrasing>"` (translate the label naturally). Gaps: goal vs step (XY problem); missing raw error, output or repro; expected vs actual; unclear scope or done-condition (analyze only / edit / commit); guesses stated as facts; what was already tried; several unrelated decisions in one message. Stay silent if the message is clear, a short reply, an option pick, a slash command, chit-chat, or the same gap was already pointed out this session. Never refuse or delay the task because of this.
+```
+
 ## Usage
 
 | Command | What it does |
